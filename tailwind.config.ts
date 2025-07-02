@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'inter': ['Inter', 'sans-serif'],
+				'code': ['Fira Code', 'monospace'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,7 +65,17 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Portfolio specific colors
+				'hero-gradient-start': 'hsl(var(--hero-gradient-start))',
+				'hero-gradient-end': 'hsl(var(--hero-gradient-end))',
+				'skill-gradient-start': 'hsl(var(--skill-gradient-start))',
+				'skill-gradient-end': 'hsl(var(--skill-gradient-end))',
+				'project-gradient-start': 'hsl(var(--project-gradient-start))',
+				'project-gradient-end': 'hsl(var(--project-gradient-end))',
+				'primary-glow': 'hsl(var(--primary-glow))',
+				'accent-glow': 'hsl(var(--accent-glow))',
+				'skill-glow': 'hsl(var(--skill-glow))',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
