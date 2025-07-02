@@ -5,37 +5,32 @@ import { Calendar, MapPin, GraduationCap, Trophy, Code, Heart } from 'lucide-rea
 const About = () => {
   const experiences = [
     {
-      period: '2023 - Présent',
-      title: 'Développeur Full Stack Senior',
-      company: 'TechCorp Innovation',
-      description: 'Lead développeur sur des projets web complexes utilisant React, Node.js et PostgreSQL.',
-      technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL']
+      period: 'Mai 2025 - Présent',
+      title: 'AI intern',
+      company: 'Thorus AI',
+      description: 'Participer à la conception et au développement de modèles d’apprentissage automatique ou profond,participer à l’élaboration des programmes de formation ,Collecter, nettoyer et analyser des données issues de différentes sources , Réaliser des expérimentations, tester des algorithmes et comparer leurs performances',
+      technologies: ['python','Tesseract', 'OpenCV', 'Flask', 'FastAPI','TensorFlow', 'PyTorch','JAX/Flax']
     },
     {
-      period: '2021 - 2023',
-      title: 'Développeur Frontend',
-      company: 'Digital Solutions',
-      description: 'Développement d\'interfaces utilisateur modernes et responsives pour des applications SaaS.',
-      technologies: ['React', 'Vue.js', 'Tailwind CSS', 'JavaScript']
+      period: 'Avril 2025 -Présent',
+      title: 'AI Research engineer ',
+      company: 'LIAM',
+      description: 'Recherche et développement de solutions basées sur l’intelligence artificielle. Test et mise en production de modèles.',
+      technologies: ['TensorFlow', 'PyTorch', 'Flask', 'FastAPI', 'Transformers', 'Hugging Face']
     },
     {
-      period: '2020 - 2021',
-      title: 'Développeur Web Junior',
-      company: 'StartupTech',
-      description: 'Première expérience professionnelle dans le développement web full-stack.',
-      technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL']
+      period: 'Décembre 2024 - Mai 2025',
+      title: 'AI Developer',
+      company: 'Ramaro Fish',
+      description: 'Développement de solutions d’intelligence artificielle appliquées à l’aquaculture. Mise en place de modèles prédictifs pour l’optimisation de l’alimentation des poissons, détection automatique des maladies via vision par ordinateur, et automatisation des rapports d’analyse. Utilisation de Python, FastAPI, LangChain pour la mise en œuvre. Collaboration avec les équipes de production pour intégrer les solutions dans les systèmes existants.',
+      technologies: ['Python', 'FastAPI', 'LangChain']
     }
   ];
 
   const achievements = [
     {
-      icon: Trophy,
-      title: 'Prix d\'Excellence',
-      description: 'Meilleur projet étudiant 2020'
-    },
-    {
       icon: Code,
-      title: '50+ Projets',
+      title: '40 Projets',
       description: 'Développés avec succès'
     },
     {
@@ -53,7 +48,7 @@ const About = () => {
             À Propos de Moi
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Découvrez mon parcours, mes passions et ce qui me motive dans le développement web.
+            Découvrez mon parcours, mes passions et ce qui me motive dans le domaine de l'intelligence artificielle et la science des données.
           </p>
         </div>
 
@@ -68,7 +63,7 @@ const About = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">Formation</h3>
-                    <p className="text-muted-foreground">Master en Informatique</p>
+                    <p className="text-muted-foreground">Master 1 en Mathématiques,informatiques et statistiques appliquées </p>
                   </div>
                 </div>
 
@@ -88,7 +83,7 @@ const About = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">Expérience</h3>
-                    <p className="text-muted-foreground">4+ années</p>
+                    <p className="text-muted-foreground">3+ années</p>
                   </div>
                 </div>
               </CardContent>
@@ -96,9 +91,9 @@ const About = () => {
 
             <div className="prose prose-invert max-w-none">
               <p className="text-muted-foreground leading-relaxed">
-                Passionné par la technologie depuis mon jeune âge, j'ai découvert le développement web 
-                lors de mes études universitaires. Ce qui a commencé comme une curiosité s'est rapidement 
-                transformé en une véritable passion.
+              Passionné par la science des données, l’intelligence artificielle et le développement, je suis un ingénieur IA
+              innovant, autonome et productif. Doté d’une solide base en mathématiques et informatique, je conçois
+              des solutions intelligentes utiles au quotidien.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 J'aime créer des solutions qui ont un impact réel sur la vie des utilisateurs. 

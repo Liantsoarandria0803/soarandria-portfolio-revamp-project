@@ -1,0 +1,126 @@
+{
+    "project20": {
+        "name": "FACIAL STRESS DETECTION",
+        "description": "This project focuses on developing a Convolutional Neural Network (CNN) to classify facial images into 'stress' and 'no stress' categories. The model is trained on a dataset of facial images and achieves an accuracy of 88.52%.",
+        "link": "https://github.com/Liantsoarandria0803/Facial-Stress-Recognition",
+        "image1": "/mobileFacial.jpg",
+        "image2": "/desktopfacial.png"
+    },
+    "project21":
+    {
+        "name": "BIBLE VERSE FINDER",
+        "description": "A mobile application that allows users to search for Bible verses based on keywords or phrases. The application retrieves relevant verses from the Bible and displays them to the user, providing a convenient way to explore and reference scriptural passages.",
+        "link": "https://github.com/Liantsoarandria0803/Bible-verse-finder",
+        "image1": "/bible.jpg"
+    },
+    "project19": {
+        "name": "FAKE NEWS DETECTION",
+        "description": "Artificial intelligence based with deep learning algorithm which can detect if news is fake or real by analysing the content of the news ",
+        "link": "https://github.com/Liantsoarandria0803/Fake-News-Detection",
+        "image1": "/FakeNews.png"
+    },
+    "project18": {
+        "name": "BOOK SYSTEM RECOMMENDATION",
+        "description": "A book recommendation system is designed to assist readers in discovering books that align with their interests and preferences. These systems analyze various data points to provide personalized suggestions, enhancing the user's reading experience.",
+        "link": "https://github.com/Liantsoarandria0803/Books-system-recommendation",
+        "image1": "/book.png"
+    },
+    "project17": {
+        "name": "HEALTH MENTAL DISEASE",
+        "description": " Analyzes a dataset related to depression and builds a predictive model to classify individuals as depressed or not based on various features.",
+        "link": "https://github.com/Liantsoarandria0803/Health-mental-disease",
+        "image1": "/depr.jpg"
+    },
+    "project10": {
+        "name": "KAJY CARDS",
+        "description": "A strategy or card-based game, potentially inspired by classic collectible or trading card games (TCG), similar to games like Magic: The Gathering or Hearthstone. The game may involve different cards with unique attributes like attack power, health points, and special abilities.",
+        "link": "https://github.com/SMART-KAJY-AlgoGames/KAJY-CARDS",
+        "image1": "/kajy.jpg"
+    },
+    "project16": {
+        "name": "IMAGE CLASSIFICATION",
+        "description": "This project implements a deep learning model using a Convolutional Neural Network (CNN) architecture to classify images from the CIFAR-10 dataset. The CIFAR-10 dataset is a widely used benchmark dataset in computer vision, containing 60,000 color images across 10 classes, including airplanes, automobiles, birds, cats, deer, dogs, frogs, horses, ships, and trucks.",
+        "link": "https://github.com/Liantsoarandria0803/CIFAR-10-",
+        "image1": "Screenshot from 2025-01-10 19-14-39.png"
+    },
+    "project14": {
+        "name": "HAND SIGN LANGUAGE",
+        "description": "The HAND SIGN LANGUAGE project is a machine learning application designed to recognize hand sign language gestures using Convolutional Neural Networks (CNNs). By leveraging the Sign Language MNIST dataset, this program trains a model to classify different sign gestures into corresponding letters or numbers. The model is highly accurate and can be deployed in real-world applications to facilitate communication between sign language users and non-signers.",
+        "link": "https://github.com/Liantsoarandria0803/Sign-language-MNIST",
+        "image1": "/images2.png"
+    },
+    "project12": {
+        "name": "BREAST CANCER DIAGNOSTIC",
+        "description": "MAchine learning which can dectect if you have breast cancer, it's based with decision trees algorithm that I've been implemented from scratch.",
+        "link": "https://github.com/Liantsoarandria0803/Breast-Cancer-Diagnosis-",
+        "image1": "breastC.png"
+    },
+    "project9": {
+        "name": "HEART DISEASE DIAGNOSTIC",
+        "description": "A web application that diagnoses heart disease in an individual. <br> This is powered by the RandriaMLP engine<br><br><strong> Techno: </strong> PHP, Python3",
+        "link": "https://github.com/Liantsoarandria0803/HEART-DISEASE-DIAGNOSTIC",
+        "image1": "/Screenshot from 2024-12-26 09-55-51.png"
+    },
+    "project1": {
+        "name": "MLP BY RANDRIA",
+        "description": "A multilayer perceptron (MLP) is a type of artificial neural network composed of multiple layers of neurons. The neurons in an MLP typically use nonlinear activation functions, allowing the network to learn complex patterns in the data. This is an ANN model I created that can classify 2 classes (0 or 1) <br><br><strong> Techno: </strong> python",
+        "link": "https://github.com/Liantsoarandria0803/MultiLayersPerceptron",
+        "image1": "deep.png"
+    },
+    "project13": {
+        "name": "TEXT SPAM",
+        "description": "A machine learning algorithm which can detect if your message is spam or not ",
+        "link": "https://github.com/Liantsoarandria0803/SpamMessage"
+    },
+    "project15": {
+        "name": "RAIN PREDICTION",
+        "description": "A machine learning algorithm which can be predict raining in function of historical data (Temperature,Pressure,Humidity,Winds'sVelocity,Cloud covering)",
+        "link": "https://github.com/Liantsoarandria0803/WeatherForecast",
+        "image1": "Screenshot from 2025-01-03 11-33-47.png"
+    },
+    "project11": {
+        "name": "Hanotan-e",
+        "description": "This application serves as an online forum platform where users can discuss various topics, share knowledge, ask questions, and provide answers.",
+        "link": "https://github.com/Liantsoarandria0803/Hanontan-e",
+        "image1": "/Screenshot from 2024-12-26 10-05-46.png"
+    },
+    "project2": {
+        "name": "JOYALESTORE",
+        "description": "A simple dynamic e-commerce website dedicated to selling clothing items <br><br><strong> Techno: </strong> HTML, CSS, JAVASCRIPT",
+        "link": "https://liantsoarandria0803.github.io/JOYA/",
+        "image1": "/Screenshot from 2024-12-26 09-53-48.png",
+        "image2": "/Screenshot from 2024-12-26 09-54-03.png"
+    },
+    "project4": {
+        "name": "SLOT MACHINE",
+        "description": "A simple web application or mini online game that follows the same principle as a real-life slot machine. <br><br><strong> Techno: </strong> HTML, CSS, JAVASCRIPT",
+        "link": "https://liantsoarandria0803.github.io/MachineAsous/",
+        "image1": "/Screenshot from 2024-12-26 09-58-35.png"
+    },
+    "project3": {
+        "name": "RANDRIA'SCRIPT",
+        "description": "An open-source software that encrypts and decrypts messages using its own type of encryption (symmetric encryption) <br><br><strong> Techno: </strong> c",
+        "link": "https://github.com/Liantsoarandria0803/Randria-scrypt",
+        "image1": "/images.jpeg"
+    },
+    "project5": {
+        "name": "APP AGE CALCULATOR",
+        "description": "A simple web application that calculates the total time (Y/M/D) you have survived on Earth <br><br><strong> Techno: </strong> HTML, CSS, JAVASCRIPT",
+        "link": "https://liantsoarandria0803.github.io/AGE_CALCULATOR/"
+    },
+    "project6": {
+        "name": "BRAINFUCK INTERPRETER",
+        "description": "A simple program that interprets Brainfuck code <br><br><strong> Techno: </strong> python, c++",
+        "link": "https://github.com/Liantsoarandria0803/Brainfuck-Interpreter"
+    },
+    "project7": {
+        "name": "Group Chat App",
+        "description": "A web application dedicated to group communication <br><br><strong> Techno: </strong> HTML, CSS, JAVASCRIPT, PHP, MYSQL",
+        "link": "https://github.com/Liantsoarandria0803/GroupChatApp"
+    },
+    "project8": {
+        "name": "Samba Admin UI/UX",
+        "description": "A web interface dedicated to admins to manage all users for a SAMBA server <br><br><strong> Techno: </strong> HTML, CSS, JAVASCRIPT, PHP, MYSQL",
+        "link": "https://github.com/Kimbohy/sambaWebUI"
+    }
+}

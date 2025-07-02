@@ -12,82 +12,165 @@ const Projects = () => {
     { id: 'web', label: 'Web Apps' },
     { id: 'mobile', label: 'Mobile' },
     { id: 'ecommerce', label: 'E-commerce' },
-    { id: 'saas', label: 'SaaS' }
   ];
 
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'Plateforme e-commerce complète avec paiement intégré, gestion d\'inventaire et tableau de bord administrateur.',
-      longDescription: 'Développement d\'une solution e-commerce moderne avec React, Node.js et Stripe. Inclut la gestion des produits, commandes, utilisateurs et analytics en temps réel.',
-      image: '/api/placeholder/600/400',
-      category: 'ecommerce',
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'AWS'],
-      githubUrl: 'https://github.com/Liantsoarandria0803/ecommerce-platform',
-      liveUrl: 'https://ecommerce-demo.vercel.app',
+      title: 'PotatoGuard',
+      description: "A web application that helps users to protect their potato plants from pests and diseases by providing information on how to identify and treat them.",
+      longDescription: "Application web destinée à l'agriculture intelligente, utilisant le deep learning pour identifier les maladies des plants de pommes de terre et proposer des traitements adaptés.",
+      image: '/potatoGuard.png',
+      category: 'web',
+      technologies: ['React', 'Tailwind CSS', 'FastAPI', 'Tensorflow', 'Docker', 'Deep Learning'],
+      githubUrl: 'https://github.com/Liantsoarandria0803/health-ai-mobile-guide',
+      liveUrl: 'https://potatoguardrandriaindustries.netlify.app/',
       featured: true
     },
     {
       id: 2,
-      title: 'Task Management SaaS',
-      description: 'Application de gestion de tâches collaborative avec fonctionnalités temps réel et intégrations multiples.',
-      longDescription: 'SaaS de productivité permettant aux équipes de collaborer efficacement. Fonctionnalités: kanban boards, chat en temps réel, rapports analytiques.',
-      image: '/api/placeholder/600/400',
-      category: 'saas',
-      technologies: ['Next.js', 'TypeScript', 'Prisma', 'Socket.io', 'Vercel'],
-      githubUrl: 'https://github.com/Liantsoarandria0803/task-manager',
-      liveUrl: 'https://task-manager-pro.vercel.app',
+      title: 'FRIDAY',
+      description: "A virtual assistant that can help you with your daily tasks, such as setting reminders, giving you some news, informations, and answering questions.",
+      longDescription: "Assistant virtuel intelligent, utilisant NLP et grands modèles de langage pour accomplir des tâches quotidiennes via une interface Gradio.",
+      image: '/FRIDAY.png',
+      category: 'ai',
+      technologies: ['Python', 'NLP', 'Deep Learning', 'Transformers', 'LLMs', 'Gradio'],
+      githubUrl: '#',
+      liveUrl: 'https://huggingface.co/spaces/Liantsoaxx08/Friday',
       featured: true
     },
     {
       id: 3,
-      title: 'Mobile Finance App',
-      description: 'Application mobile de gestion financière personnelle avec suivi des dépenses et objectifs d\'épargne.',
-      longDescription: 'App mobile native pour la gestion financière personnelle. Inclut le suivi des dépenses, budgets, objectifs d\'épargne et visualisations avancées.',
-      image: '/api/placeholder/600/400',
-      category: 'mobile',
-      technologies: ['React Native', 'Expo', 'Node.js', 'MongoDB', 'Chart.js'],
-      githubUrl: 'https://github.com/Liantsoarandria0803/finance-app',
-      liveUrl: 'https://expo.dev/@liantsoa/finance-app',
+      title: 'FACIAL STRESS DETECTION',
+      description: "This project focuses on developing a CNN model to classify facial images into 'stress' and 'no stress' categories with 88.52% accuracy.",
+      longDescription: "Classification de niveau de stress facial par CNN, déployée via FastAPI et Hugging Face Spaces pour une interaction en temps réel.",
+      image: '/desktopfacial.png',
+      category: 'ai',
+      technologies: ['CNN', 'Deep Learning', 'FastAPI', 'Hugging Face'],
+      githubUrl: 'https://github.com/Liantsoarandria0803/Facial-Stress-Recognition',
+      liveUrl: 'https://huggingface.co/spaces/Liantsoaxx08/Stress-Facial-Recognitipon',
       featured: false
     },
     {
       id: 4,
-      title: 'Portfolio Designer',
-      description: 'Créateur de portfolio en ligne avec templates personnalisables et hébergement intégré.',
-      longDescription: 'Plateforme permettant aux créateurs de construire facilement leur portfolio en ligne avec des templates modernes et un système de drag & drop.',
-      image: '/api/placeholder/600/400',
-      category: 'web',
-      technologies: ['Vue.js', 'Nuxt.js', 'Tailwind CSS', 'Supabase', 'Netlify'],
-      githubUrl: 'https://github.com/Liantsoarandria0803/portfolio-builder',
-      liveUrl: 'https://portfolio-builder.netlify.app',
+      title: 'BIBLE FOR YOU',
+      description: "A mobile application that allows users to search all texts that they want to read by Bible verses.",
+      longDescription: "App mobile React Native permettant de rechercher et lire des versets bibliques avec fonctionnalités de favoris et historique.",
+      image: '/bible.jpg',
+      category: 'mobile',
+      technologies: ['React Native', 'Firebase'],
+      githubUrl: 'https://github.com/Liantsoarandria0803/Bible-verse-finder',
+      liveUrl: '',
       featured: false
     },
     {
       id: 5,
-      title: 'Real Estate Platform',
-      description: 'Plateforme immobilière avec recherche avancée, visites virtuelles et système de réservation.',
-      longDescription: 'Solution complète pour l\'immobilier incluant la recherche de propriétés, visites virtuelles 360°, système de réservation et gestion des agents.',
-      image: '/api/placeholder/600/400',
-      category: 'web',
-      technologies: ['React', 'Django', 'PostgreSQL', 'MapBox', 'Cloudinary'],
-      githubUrl: 'https://github.com/Liantsoarandria0803/real-estate',
-      liveUrl: 'https://real-estate-mg.vercel.app',
-      featured: true
+      title: 'FAKE NEWS DETECTION',
+      description: "AI-based deep learning algorithm which can detect if news is fake or real by analysing the content.",
+      longDescription: "Détection de fausses nouvelles via un modèle NLP entraîné sur un large corpus et déployé en tant qu'API.",
+      image: '/FakeNews.png',
+      category: 'ai',
+      technologies: ['NLP', 'Deep Learning'],
+      githubUrl: 'https://github.com/Liantsoarandria0803/Fake-News-Detection',
+      liveUrl: '',
+      featured: false
     },
     {
       id: 6,
-      title: 'Fitness Tracker App',
-      description: 'Application de suivi fitness avec plans d\'entraînement personnalisés et suivi de progression.',
-      longDescription: 'App mobile complète pour le fitness avec programmes d\'entraînement, suivi nutritionnel, objectifs personnalisés et communauté intégrée.',
-      image: '/api/placeholder/600/400',
-      category: 'mobile',
-      technologies: ['Flutter', 'Firebase', 'Cloud Functions', 'ML Kit'],
-      githubUrl: 'https://github.com/Liantsoarandria0803/fitness-tracker',
-      liveUrl: 'https://play.google.com/store/apps/details?id=com.liantsoa.fitness',
+      title: "HAND SIGN LANGUAGE",
+      description: "The HAND SIGN LANGUAGE project is a machine learning application designed to recognize hand sign language gestures using Convolutional Neural Networks (CNNs). By leveraging the Sign Language MNIST dataset, this program trains a model to classify different sign gestures into corresponding letters or numbers. The model is highly accurate and can be deployed in real-world applications to facilitate communication between sign language users and non-signers.",
+      longDescription: "Reconnaissance des gestes de la langue des signes via CNN, entraîné sur le dataset Sign Language MNIST pour faciliter la communication entre utilisateurs de la langue des signes et non-signants.",
+      image: "/images2.png",
+      category: "ai",
+      technologies: ["CNN", "Deep Learning", "FASTAPI"],
+      githubUrl: "https://github.com/Liantsoarandria0803/Sign-language-MNIST",
+      liveUrl: "https://huggingface.co/spaces/Liantsoaxx08/Sign-Language-MNIST",
       featured: false
-    }
+    },
+    {
+      id: 7,
+      title: "BREAST CANCER DIAGNOSTIC",
+      description: "Machine learning which can detect if you have breast cancer, it's based with decision trees algorithm that I've been implemented from scratch.",
+      longDescription: "Diagnostic du cancer du sein via un algorithme d'arbres de décision implémenté de zéro.",
+      image: "breastC.png",
+      category: "ai",
+      technologies: ["Machine Learning", "Decision Trees"],
+      githubUrl: "https://github.com/Liantsoarandria0803/Breast-Cancer-Diagnosis-",
+      liveUrl: "",
+      featured: false
+    },
+    {
+      id: 8,
+      title: "HEART DISEASE DIAGNOSTIC",
+      description: "A web application that diagnoses heart disease in an individual. This is powered by the RandriaMLP engine.",
+      longDescription: "Application web pour diagnostiquer les maladies cardiaques, alimentée par le moteur RandriaMLP.",
+      image: "/Screenshot from 2024-12-26 09-55-51.png",
+      category: "web",
+      technologies: ["PHP", "Python", "Machine Learning"],
+      githubUrl: "https://github.com/Liantsoarandria0803/HEART-DISEASE-DIAGNOSTIC",
+      liveUrl: "",
+      featured: false
+    },
+    {
+      id: 9,
+      title: "MLP BY RANDRIA",
+      description: "A multilayer perceptron (MLP) is a type of artificial neural network composed of multiple layers of neurons. The neurons in an MLP typically use nonlinear activation functions, allowing the network to learn complex patterns in the data. This is an ANN model I created that can classify 2 classes (0 or 1).",
+      longDescription: "Perceptron multicouche (MLP) conçu pour classifier deux classes (0 ou 1) avec des fonctions d'activation non linéaires.",
+      image: "deep.png",
+      category: "ai",
+      technologies: ["Python"],
+      githubUrl: "https://github.com/Liantsoarandria0803/MultiLayersPerceptron",
+      liveUrl: "",
+      featured: false
+    },
+    {
+      id: 10,
+      title: "TEXT SPAM",
+      description: "A machine learning algorithm which can detect if your message is spam or not.",
+      longDescription: "Détection de messages spam via un algorithme d'apprentissage automatique.",
+      image: "",
+      category: "ai",
+      technologies: ["NLP", "Machine Learning"],
+      githubUrl: "https://github.com/Liantsoarandria0803/SpamMessage",
+      liveUrl: "",
+      featured: false
+    },
+    {
+      id: 11,
+      title: "RAIN PREDICTION",
+      description: "A machine learning algorithm which can predict raining in function of historical data (Temperature, Pressure, Humidity, Wind's Velocity, Cloud covering).",
+      longDescription: "Prédiction de pluie basée sur des données historiques (température, pression, humidité, vitesse du vent, couverture nuageuse) via apprentissage automatique.",
+      image: "Screenshot from 2025-01-03 11-33-47.png",
+      category: "ai",
+      technologies: ["Machine Learning", "Python", "FASTAPI"],
+      githubUrl: "https://github.com/Liantsoarandria0803/WeatherForecast",
+      liveUrl: "",
+      featured: false
+    },
+    {
+      id: 12,
+      title: "Hanotan-e",
+      description: "This application serves as an online forum platform where users can discuss various topics, share knowledge, ask questions, and provide answers.",
+      longDescription: "Plateforme de forum en ligne permettant aux utilisateurs de discuter de divers sujets, partager des connaissances, poser des questions et fournir des réponses.",
+      image: "/Screenshot from 2024-12-26 10-05-46.png",
+      category: "web",
+      technologies: ["HTML", "CSS", "Javascript", "PHP", "MySQL"],
+      githubUrl: "https://github.com/Liantsoarandria0803/Hanontan-e",
+      liveUrl: "",
+      featured: false
+    },
+    {
+      id: 13,
+      title: "JOYALESTORE",
+      description: "A simple dynamic e-commerce website dedicated to selling clothing items.",
+      longDescription: "Site e-commerce dynamique dédié à la vente de vêtements.",
+      image: "/Screenshot from 2024-12-26 09-53-48.png",
+      category: "ecommerce",
+      technologies: ["HTML", "CSS", "JavaScript"],
+      githubUrl: "https://liantsoarandria0803.github.io/JOYA/",
+      liveUrl: "",
+      featured: false
+    },
   ];
 
   const filteredProjects = selectedCategory === 'all' 
@@ -119,15 +202,11 @@ const Projects = () => {
             {featuredProjects.slice(0, 2).map((project) => (
               <Card key={project.id} className="project-card group overflow-hidden">
                 <div className="relative">
-                  <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                    <div className="text-center p-8">
-                      <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <Eye className="h-8 w-8 text-primary" />
-                      </div>
-                      <p className="text-muted-foreground">Aperçu du projet</p>
-                    </div>
-                  </div>
-                  
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="aspect-video object-cover w-full h-full"
+                  />
                   <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <div className="flex space-x-4">
                       <Button
@@ -223,14 +302,11 @@ const Projects = () => {
               style={{ animationDelay: `${index * 100}ms`, animationFillMode: 'forwards' }}
             >
               <div className="relative">
-                <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
-                  <div className="text-center p-6">
-                    <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <Eye className="h-6 w-6 text-primary" />
-                    </div>
-                    <p className="text-sm text-muted-foreground">Aperçu du projet</p>
-                  </div>
-                </div>
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="aspect-video object-cover w-full h-full"
+                />
                 
                 {project.featured && (
                   <div className="absolute top-3 right-3">

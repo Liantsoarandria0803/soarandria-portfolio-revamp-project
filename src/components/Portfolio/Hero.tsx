@@ -8,10 +8,10 @@ const Hero = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   
   const roles = [
-    'Développeur Full Stack',
-    'Expert React & TypeScript',
-    'Architecte Solutions Web',
-    'Créateur d\'Expériences Digitales'
+   'JUNIOR AI RESEARCH ENGINEER',
+   'DATA SCIENTIST',
+   'STATISTICIAN',
+   'FULL-STACK DEVELOPER'
   ];
 
   useEffect(() => {
@@ -96,7 +96,7 @@ const Hero = () => {
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
               Passionné par la création d'expériences numériques exceptionnelles, 
               je transforme les idées en solutions innovantes avec des technologies modernes.
-              Spécialisé dans le développement full-stack avec React, TypeScript et Node.js.
+              Spécialisé dans l'intelligence artificielle, la science de données et la developpement web et mobile.
             </p>
           </div>
 
@@ -126,7 +126,7 @@ const Hero = () => {
                 onClick={() => {
                   // Simulate CV download - replace with actual CV link
                   const link = document.createElement('a');
-                  link.href = '/cv-liantsoa-randria.pdf';
+                  link.href = '/resume1.pdf';
                   link.download = 'CV-Liantsoa-Randria.pdf';
                   link.click();
                 }}

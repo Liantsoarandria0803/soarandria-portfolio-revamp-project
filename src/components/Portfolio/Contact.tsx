@@ -31,15 +31,15 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      value: 'liantsoa.randria@example.com',
-      link: 'mailto:liantsoa.randria@example.com',
+      value: 'liantsoarandrianasimbolarivelo@gmail.com',
+      link: 'mailto:liantsoarandrianasimbolarivelo@gmail.com',
       color: 'text-primary'
     },
     {
       icon: Phone,
       title: 'Téléphone',
-      value: '+261 34 XX XX XX XX',
-      link: 'tel:+261341234567',
+      value: '+261 32 45 779 76',
+      link: 'tel:+261324577976',
       color: 'text-accent'
     },
     {
@@ -52,7 +52,7 @@ const Contact = () => {
     {
       icon: Clock,
       title: 'Disponibilité',
-      value: 'Lun - Ven, 8h - 18h GMT+3',
+      value: 'Lun - Ven, 9h - 18h',
       color: 'text-primary'
     }
   ];
@@ -67,48 +67,20 @@ const Contact = () => {
     {
       icon: Linkedin,
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/liantsoa-randria',
+      url: 'https://www.linkedin.com/in/liantsoa-rantoniaina-randrianasimbolarivelo-90789a314',
       color: 'hover:text-accent'
-    },
-    {
-      icon: Twitter,
-      name: 'Twitter',
-      url: 'https://twitter.com/liantsoa_dev',
-      color: 'hover:text-skill-glow'
     },
     {
       icon: MessageCircle,
       name: 'Discord',
-      url: 'https://discord.com/users/liantsoa#1234',
+      url: 'https://discord.com/users/liantsoa0803_93031',
       color: 'hover:text-primary'
     }
   ];
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
     setIsSubmitting(true);
-
-    // Simulate form submission
-    try {
-      // Here you would typically send the form data to your backend
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      toast({
-        title: "Message envoyé !",
-        description: "Merci pour votre message. Je vous répondrai dans les plus brefs délais.",
-        action: <CheckCircle className="h-4 w-4" />
-      });
-
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    } catch (error) {
-      toast({
-        title: "Erreur",
-        description: "Une erreur s'est produite. Veuillez réessayer.",
-        variant: "destructive"
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+    // form submission handled by Formspree via action/method
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -203,11 +175,11 @@ const Contact = () => {
                     <div className="text-xs text-muted-foreground">Temps de réponse</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-accent">50+</div>
+                    <div className="text-2xl font-bold text-accent">30+</div>
                     <div className="text-xs text-muted-foreground">Projets livrés</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-skill-glow">4+</div>
+                    <div className="text-2xl font-bold text-skill-glow">2+</div>
                     <div className="text-xs text-muted-foreground">Années d'expérience</div>
                   </div>
                   <div>
@@ -222,7 +194,12 @@ const Contact = () => {
           {/* Contact Form */}
           <Card className="p-8">
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form 
+                action="https://formspree.io/f/mzzdjgpp" 
+                method="POST" 
+                onSubmit={handleSubmit} 
+                className="space-y-6"
+              >
                 <div>
                   <h3 className="text-xl font-bold mb-6">Envoyez-moi un message</h3>
                 </div>

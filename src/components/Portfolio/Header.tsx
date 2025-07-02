@@ -25,8 +25,8 @@ const Header = () => {
 
   const socialLinks = [
     { href: 'https://github.com/Liantsoarandria0803', icon: Github, label: 'GitHub' },
-    { href: 'https://linkedin.com/in/liantsoa-randria', icon: Linkedin, label: 'LinkedIn' },
-    { href: 'mailto:liantsoa.randria@example.com', icon: Mail, label: 'Email' },
+    { href: 'https://www.linkedin.com/in/liantsoa-rantoniaina-randrianasimbolarivelo-90789a314', icon: Linkedin, label: 'LinkedIn' },
+    { href: 'mailto:liantsoarandrianasimbolarivelo@gmail.com', icon: Mail, label: 'Email' },
   ];
 
   const scrollToSection = (href: string) => {

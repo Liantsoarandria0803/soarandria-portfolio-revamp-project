@@ -11,6 +11,8 @@ import {
   Zap,
   Shield
 } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { title } from 'process';
 
 const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -35,17 +37,34 @@ const Skills = () => {
 
   const skillCategories = [
     {
+      title:'AI & Machine Learning',
+      icon: Zap,
+      color: 'text-skill-glow',
+      bgColor: 'bg-skill-glow/10',
+      skills: [
+        { name: 'Machine Learning', level: 85 },
+        { name: 'Deep Learning', level: 80 },
+        { name: 'Natural Language Processing', level: 80 },
+        { name: 'Computer Vision', level: 90 },
+        { name: 'Reinforcement Learning', level: 65 },
+        { name: 'Data Analysis', level: 90 },
+        { name: 'Data Visualization', level: 85 },
+        { name: 'AI Ethics', level: 70 },
+        {name :'AI Model Deployment', level: 90 },
+        {name :'LLM Fine-tuning', level: 80 },
+      ]
+    },
+    {
       title: 'Frontend',
       icon: Code,
       color: 'text-primary',
       bgColor: 'bg-primary/10',
       skills: [
         { name: 'React', level: 95 },
+        {name:'JavaScript', level: 90 },
         { name: 'TypeScript', level: 90 },
-        { name: 'Next.js', level: 85 },
         { name: 'Vue.js', level: 80 },
         { name: 'Tailwind CSS', level: 95 },
-        { name: 'SASS/SCSS', level: 85 }
       ]
     },
     {
@@ -54,12 +73,13 @@ const Skills = () => {
       color: 'text-accent',
       bgColor: 'bg-accent/10',
       skills: [
-        { name: 'Node.js', level: 90 },
-        { name: 'Express.js', level: 85 },
+        {name:'FAST-API', level: 90 },
+        {name:'Django', level: 89 },
+        {name:'mySQL', level: 90 },
+        { name: 'Node.js', level: 80 },
         { name: 'NestJS', level: 80 },
         { name: 'PostgreSQL', level: 85 },
-        { name: 'MongoDB', level: 80 },
-        { name: 'Prisma', level: 85 }
+        { name: 'Prisma', level: 80 }
       ]
     },
     {
@@ -68,10 +88,7 @@ const Skills = () => {
       color: 'text-skill-glow',
       bgColor: 'bg-skill-glow/10',
       skills: [
-        { name: 'React Native', level: 85 },
-        { name: 'Expo', level: 80 },
-        { name: 'Flutter', level: 70 },
-        { name: 'PWA', level: 90 }
+        { name: 'React Native', level: 85 }
       ]
     },
     {
@@ -82,8 +99,8 @@ const Skills = () => {
       skills: [
         { name: 'AWS', level: 75 },
         { name: 'Docker', level: 80 },
-        { name: 'Vercel', level: 90 },
-        { name: 'Netlify', level: 85 }
+        { name: 'Vercel', level: 85 },
+        { name: 'Netlify', level: 90 }
       ]
     },
     {
@@ -95,7 +112,7 @@ const Skills = () => {
         { name: 'Figma', level: 85 },
         { name: 'Adobe XD', level: 75 },
         { name: 'UI/UX Design', level: 80 },
-        { name: 'Responsive Design', level: 95 }
+        { name: 'Responsive Design', level: 75 }
       ]
     },
     {
@@ -113,24 +130,13 @@ const Skills = () => {
   ];
 
   const certifications = [
-    {
-      title: 'AWS Certified Solutions Architect',
-      issuer: 'Amazon Web Services',
-      year: '2023',
-      icon: Shield
-    },
-    {
-      title: 'React Advanced Patterns',
-      issuer: 'Meta',
-      year: '2023',
-      icon: Code
-    },
-    {
-      title: 'TypeScript Deep Dive',
-      issuer: 'Microsoft',
-      year: '2022',
-      icon: Zap
-    }
+    { id: 1, path: "/RANDRIANASIMBOLARIVELO20240916-74-yim38d.jpg", alt: "Certification 1" },
+    { id: 2, path: "/RANDRIANASIMBOLARIVELO20241020-72-1e0j7vh.jpg", alt: "Certification 2" },
+    { id: 3, path: "/Liantsoa Randria - Intro to Machine Learning.png", alt: "Intro to Machine Learning" },
+    { id: 4, path: "/Liantsoa Randria - Pandas.png", alt: "Pandas Certification" },
+    { id: 5, path: "/Liantsoa Randria - Intro to SQL.png", alt: "Intro to SQL" },
+    { id: 6, path: "/RANDRIANASIMBOLARIVELO20240916-74-yim38d.jpg", alt: "Certification 6" },
+    {id:7,path:"/Liantsoa Randria - Time Series.png", alt: "Time Series Certification" }
   ];
 
   return (
@@ -189,28 +195,22 @@ const Skills = () => {
 
         {/* Certifications */}
         <div className="text-center mb-12">
-          <h3 className="text-2xl font-bold mb-8">Certifications & Formations</h3>
+          <h3 className="text-2xl font-bold mb-8 text-white">Certifications</h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {certifications.map((cert, index) => {
-              const Icon = cert.icon;
-              return (
-                <Card key={index} className="p-6 text-center hover:shadow-lg transition-all duration-300 group">
-                  <CardContent className="space-y-4">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto group-hover:bg-primary/20 transition-colors">
-                      <Icon className="h-8 w-8 text-primary" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-lg mb-2">{cert.title}</h4>
-                      <p className="text-muted-foreground">{cert.issuer}</p>
-                      <Badge variant="outline" className="mt-2">
-                        {cert.year}
-                      </Badge>
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
+          <div className="flex flex-wrap justify-center gap-8">
+            {certifications.map((cert, index) => (
+              <motion.div
+            key={cert.id}
+              initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          whileHover={{ scale: 1.02 }} // Effet de zoom au survol
+          transition={{ duration: 0.6, delay: index * 0.1 }}
+          className="bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-[#4d194d] w-64"
+              >
+          <img src={cert.path} alt={cert.alt} className="w-full h-auto object-cover" />
+              </motion.div>
+            ))}
           </div>
         </div>
 
@@ -220,9 +220,9 @@ const Skills = () => {
           
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              'React', 'TypeScript', 'Node.js', 'Next.js', 'Tailwind CSS', 
+              'Python','FastAPI','Django','Tensorflow','Transformers','React', 'TypeScript', 'Nest.js', 'Tailwind CSS', 
               'PostgreSQL', 'MongoDB', 'AWS', 'Docker', 'Git', 'Figma',
-              'Express.js', 'Prisma', 'React Native', 'Vue.js', 'SASS'
+              , 'Prisma', 'React Native'
             ].map((tech, index) => (
               <Badge 
                 key={index} 

@@ -26,20 +26,11 @@ const Footer = () => {
         { label: 'Contact', href: '#contact' }
       ]
     },
-    {
-      title: 'Projets',
-      links: [
-        { label: 'E-Commerce Platform', href: 'https://github.com/Liantsoarandria0803/ecommerce-platform' },
-        { label: 'Task Management SaaS', href: 'https://github.com/Liantsoarandria0803/task-manager' },
-        { label: 'Mobile Finance App', href: 'https://github.com/Liantsoarandria0803/finance-app' },
-        { label: 'Real Estate Platform', href: 'https://github.com/Liantsoarandria0803/real-estate' }
-      ]
-    },
+    
     {
       title: 'Ressources',
       links: [
-        { label: 'Blog', href: 'https://blog.liantsoa-randria.dev' },
-        { label: 'CV / Resume', href: '/cv-liantsoa-randria.pdf' },
+        { label: 'CV / Resume', href: '/resume1.pdf' },
         { label: 'Certifications', href: '#competences' },
         { label: 'Open Source', href: 'https://github.com/Liantsoarandria0803' }
       ]
@@ -56,7 +47,7 @@ const Footer = () => {
               Liantsoa Randria
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Développeur Full Stack passionné, créateur d'expériences numériques 
+              AI ENGINEER, créateur d'expériences numériques 
               innovantes et solutions web modernes.
             </p>
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
