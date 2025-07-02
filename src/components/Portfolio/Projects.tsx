@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Github, Eye, Filter } from 'lucide-react';
+import { ExternalLink, Github, Filter } from 'lucide-react';
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -278,7 +278,7 @@ const Projects = () => {
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 mb-12 px-4">
           <Filter className="h-5 w-5 text-muted-foreground mr-2 self-center" />
           {categories.map((category) => (
             <Button
@@ -294,7 +294,7 @@ const Projects = () => {
         </div>
 
         {/* All Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {filteredProjects.map((project, index) => (
             <Card 
               key={project.id} 

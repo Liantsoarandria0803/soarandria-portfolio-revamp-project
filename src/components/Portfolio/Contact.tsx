@@ -10,11 +10,9 @@ import {
   MapPin, 
   Send, 
   Github, 
-  Linkedin, 
-  Twitter,
+  Linkedin,
   MessageCircle,
-  Clock,
-  CheckCircle
+  Clock
 } from 'lucide-react';
 
 const Contact = () => {
@@ -113,7 +111,7 @@ const Contact = () => {
             </div>
 
             {/* Contact Details */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4">
               {contactInfo.map((info, index) => {
                 const Icon = info.icon;
                 return (
@@ -204,7 +202,7 @@ const Contact = () => {
                   <h3 className="text-xl font-bold mb-6">Envoyez-moi un message</h3>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-2">
                       Nom complet *

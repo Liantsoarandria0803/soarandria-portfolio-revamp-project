@@ -102,38 +102,40 @@ const Hero = () => {
 
           {/* Call to Action Buttons */}
           <div className="animate-fade-in-up opacity-0 delay-500">
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col gap-4 justify-center items-center px-4">
               <Button 
                 onClick={scrollToProjects}
-                className="btn-hero group"
+                className="btn-hero group w-full sm:w-auto"
               >
                 Voir mes projets
                 <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
               
-              <Button 
-                variant="outline"
-                onClick={scrollToContact}
-                className="btn-outline group"
-              >
-                Me contacter
-                <ChevronDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
-              </Button>
-              
-              <Button 
-                variant="ghost"
-                className="group hover:bg-primary/10"
-                onClick={() => {
-                  // Simulate CV download - replace with actual CV link
-                  const link = document.createElement('a');
-                  link.href = '/resume1.pdf';
-                  link.download = 'CV-Liantsoa-Randria.pdf';
-                  link.click();
-                }}
-              >
-                <Download className="mr-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
-                Télécharger CV
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                <Button 
+                  variant="outline"
+                  onClick={scrollToContact}
+                  className="btn-outline group w-full sm:w-auto"
+                >
+                  Me contacter
+                  <ChevronDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
+                </Button>
+                
+                <Button 
+                  variant="ghost"
+                  className="group hover:bg-primary/10 w-full sm:w-auto"
+                  onClick={() => {
+                    // Simulate CV download - replace with actual CV link
+                    const link = document.createElement('a');
+                    link.href = '/resume1.pdf';
+                    link.download = 'CV-Liantsoa-Randria.pdf';
+                    link.click();
+                  }}
+                >
+                  <Download className="mr-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
+                  Télécharger CV
+                </Button>
+              </div>
             </div>
           </div>
 

@@ -158,7 +158,12 @@
   .project-card {
     @apply relative overflow-hidden rounded-xl bg-card border border-border transition-all duration-300;
     @apply hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10;
-    @apply hover:scale-[1.02] hover:rotate-[0.5deg];
+  }
+  
+  @media (min-width: 768px) {
+    .project-card {
+      @apply hover:scale-[1.02] hover:rotate-[0.5deg];
+    }
   }
 
   .project-card::before {
@@ -285,4 +290,52 @@
   .delay-400 { animation-delay: 0.4s; }
   .delay-500 { animation-delay: 0.5s; }
   .delay-600 { animation-delay: 0.6s; }
+
+  /* Responsive utilities */
+  @media (max-width: 640px) {
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    
+    .text-4xl {
+      font-size: 2rem;
+      line-height: 2.25rem;
+    }
+    
+    .text-6xl {
+      font-size: 3rem;
+      line-height: 1;
+    }
+    
+    .text-2xl {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+    
+    .py-20 {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+    
+    .mb-16 {
+      margin-bottom: 2rem;
+    }
+    
+    .mb-12 {
+      margin-bottom: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .text-3xl {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+    
+    .text-lg {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  }
 }

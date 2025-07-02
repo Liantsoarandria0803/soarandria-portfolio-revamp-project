@@ -8,11 +8,9 @@ import {
   Cloud, 
   Palette, 
   GitBranch,
-  Zap,
-  Shield
+  Zap
 } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { title } from 'process';
 
 const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -152,13 +150,13 @@ const Skills = () => {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 mb-16">
           {skillCategories.map((category, categoryIndex) => {
             const Icon = category.icon;
             return (
-              <Card 
+               <Card 
                 key={categoryIndex} 
-                className="p-6 hover:shadow-lg transition-all duration-300 group hover:scale-105"
+                className="p-4 md:p-6 hover:shadow-lg transition-all duration-300 group md:hover:scale-105"
               >
                 <CardContent className="space-y-6">
                   <div className="flex items-center space-x-3">
@@ -195,9 +193,9 @@ const Skills = () => {
 
         {/* Certifications */}
         <div className="text-center mb-12">
-          <h3 className="text-2xl font-bold mb-8 text-white">Certifications</h3>
+          <h3 className="text-2xl font-bold mb-8 text-foreground">Certifications</h3>
           
-          <div className="flex flex-wrap justify-center gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
             {certifications.map((cert, index) => (
               <motion.div
             key={cert.id}
@@ -206,7 +204,7 @@ const Skills = () => {
           viewport={{ once: true }}
           whileHover={{ scale: 1.02 }} // Effet de zoom au survol
           transition={{ duration: 0.6, delay: index * 0.1 }}
-          className="bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-[#4d194d] w-64"
+          className="bg-card rounded-xl overflow-hidden shadow-lg border border-border w-full max-w-64 mx-auto"
               >
           <img src={cert.path} alt={cert.alt} className="w-full h-auto object-cover" />
               </motion.div>
@@ -221,9 +219,8 @@ const Skills = () => {
           <div className="flex flex-wrap justify-center gap-3">
             {[
               'Python','FastAPI','Django','Tensorflow','Transformers','React', 'TypeScript', 'Nest.js', 'Tailwind CSS', 
-              'PostgreSQL', 'MongoDB', 'AWS', 'Docker', 'Git', 'Figma',
-              , 'Prisma', 'React Native'
-            ].map((tech, index) => (
+              'PostgreSQL', 'MongoDB', 'AWS', 'Docker', 'Git', 'Figma', 'Prisma', 'React Native'
+            ].filter(Boolean).map((tech, index) => (
               <Badge 
                 key={index} 
                 variant="secondary" 
