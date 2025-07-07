@@ -134,7 +134,9 @@ const Skills = () => {
     { id: 4, path: "/Liantsoa Randria - Pandas.png", alt: "Pandas Certification" },
     { id: 5, path: "/Liantsoa Randria - Intro to SQL.png", alt: "Intro to SQL" },
     { id: 6, path: "/RANDRIANASIMBOLARIVELO20240916-74-yim38d.jpg", alt: "Certification 6" },
-    {id:7,path:"/Liantsoa Randria - Time Series.png", alt: "Time Series Certification" }
+    {id:7,path:"/Liantsoa Randria - Time Series.png", alt: "Time Series Certification" },
+    {id:8,path:"/LLMfundamentals.webp", alt: "LLM fundamentals Certification" },
+    {id:8,path:"/Finetunning.webp", alt: "Fine tuning fundamentals Certification" }
   ];
 
   return (

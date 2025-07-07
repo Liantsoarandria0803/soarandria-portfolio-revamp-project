@@ -177,7 +177,7 @@ const Contact = () => {
                     <div className="text-xs text-muted-foreground">Projets livrés</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-skill-glow">2+</div>
+                    <div className="text-2xl font-bold text-skill-glow">3+</div>
                     <div className="text-xs text-muted-foreground">Années d'expérience</div>
                   </div>
                   <div>
