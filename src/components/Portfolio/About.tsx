@@ -1,6 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, MapPin, GraduationCap, Trophy, Code, Heart } from 'lucide-react';
+import { title } from 'process';
 
 const About = () => {
   const experiences = [
@@ -24,6 +25,15 @@ const About = () => {
       company: 'Ramaro Fish',
       description: 'Développement de solutions d’intelligence artificielle appliquées à l’aquaculture. Mise en place de modèles prédictifs pour l’optimisation de l’alimentation des poissons, détection automatique des maladies via vision par ordinateur, et automatisation des rapports d’analyse. Utilisation de Python, FastAPI, LangChain pour la mise en œuvre. Collaboration avec les équipes de production pour intégrer les solutions dans les systèmes existants.',
       technologies: ['Python', 'FastAPI', 'LangChain']
+    },
+    {
+      period: "Sepetmbre 2024 - février 2025",
+      title:"Project Coordinator",
+      company: "SMART KAJY",
+      description: "Gestion de projets et d'activité , mentorat technique et pilotage d’équipes.",
+      technologies:[]
+
+    
     }
   ];
 
