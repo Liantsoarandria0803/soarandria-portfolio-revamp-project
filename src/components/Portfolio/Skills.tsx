@@ -173,17 +173,8 @@ const Skills = () => {
                       <div key={skillIndex} className="space-y-2">
                         <div className="flex justify-between items-center">
                           <span className="font-medium text-sm">{skill.name}</span>
-                          <span className="text-xs text-muted-foreground">{skill.level}%</span>
                         </div>
-                        <div className="skill-bar">
-                          <div 
-                            className={`skill-fill ${isVisible ? 'w-full' : 'w-0'}`}
-                            style={{ 
-                              width: isVisible ? `${skill.level}%` : '0%',
-                              transitionDelay: `${(categoryIndex * 100) + (skillIndex * 50)}ms`
-                            }}
-                          />
-                        </div>
+                        
                       </div>
                     ))}
                   </div>

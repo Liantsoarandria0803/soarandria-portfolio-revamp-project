@@ -116,8 +116,7 @@ const About = () => {
               </p>
             </div>
 
-            {/* Achievements */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {achievements.map((achievement, index) => {
                 const Icon = achievement.icon;
                 return (
@@ -132,7 +131,7 @@ const About = () => {
                   </Card>
                 );
               })}
-            </div>
+            </div> */}
           </div>
 
           {/* Experience Timeline */}
