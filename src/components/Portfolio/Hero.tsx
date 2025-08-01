@@ -11,7 +11,7 @@ const Hero = () => {
    'JUNIOR AI RESEARCH ENGINEER',
    'DATA SCIENTIST',
    'STATISTICIAN',
-   'FULL-STACK DEVELOPER'
+   'WEB DEVELOPER'
   ];
 
   useEffect(() => {
@@ -140,14 +140,14 @@ const Hero = () => {
           </div>
 
           {/* Scroll Indicator */}
-          <div className="animate-fade-in-up opacity-0 delay-600">
+          {/* <div className="animate-fade-in-up opacity-0 delay-600">
             <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
               <div className="flex flex-col items-center text-muted-foreground">
                 <span className="text-sm mb-2">Découvrir</span>
                 <ChevronDown className="h-6 w-6 animate-bounce" />
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 

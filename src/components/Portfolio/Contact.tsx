@@ -180,10 +180,6 @@ const Contact = () => {
                     <div className="text-2xl font-bold text-skill-glow">3+</div>
                     <div className="text-xs text-muted-foreground">Années d'expérience</div>
                   </div>
-                  <div>
-                    <div className="text-2xl font-bold text-primary">98%</div>
-                    <div className="text-xs text-muted-foreground">Satisfaction client</div>
-                  </div>
                 </div>
               </CardContent>
             </Card>

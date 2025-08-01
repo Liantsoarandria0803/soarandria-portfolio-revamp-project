@@ -115,6 +115,52 @@ const About = () => {
                 contribuer à des projets open source, ou explorer la nature malgache.
               </p>
             </div>
+            <br />
+            <br />
+            
+            <Card className="p-6">
+            <h3 className="text-2xl font-bold mb-8">Mon Parcours Académique</h3>
+              <CardContent className="space-y-6">
+              <div className="flex items-center space-x-3">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                    <GraduationCap className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg">2025</h3>
+                    <p className="text-muted-foreground">Boursier d'un programme "DATA/IA" avec AfricaTechUP </p>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                    <GraduationCap className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg">2024-2025</h3>
+                    <p className="text-muted-foreground">Master 1 en Mathématiques,informatiques et statistiques appliquées </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-3">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                    <GraduationCap className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg">2024</h3>
+                    <p className="text-muted-foreground">Licence en Mathématiques,informatiques et statistiques appliquées</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-3">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                    <GraduationCap className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg">2021-2023</h3>
+                    <p className="text-muted-foreground">1ère et 2ème  années de licence en Mathématiques et informatique</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
 
             {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {achievements.map((achievement, index) => {
