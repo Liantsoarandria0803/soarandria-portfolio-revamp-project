@@ -1,18 +1,17 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronDown, Download, ExternalLink } from 'lucide-react';
+import { useLanguage } from '@/lib/i18n';
 
 const Hero = () => {
   const [currentRole, setCurrentRole] = useState(0);
   const [displayText, setDisplayText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
+  const { language, t } = useLanguage();
   
-  const roles = [
-   'JUNIOR AI RESEARCH ENGINEER',
-   'DATA SCIENTIST',
-   'STATISTICIAN',
-   'WEB DEVELOPER'
-  ];
+  const roles = language === 'fr'
+    ? ['INGÉNIEUR IA', 'DATA SCIENTIST', 'STATISTICIEN', 'DÉVELOPPEUR WEB']
+    : ['AI ENGINEER', 'DATA SCIENTIST', 'STATISTICIAN', 'WEB DEVELOPER'];
 
   useEffect(() => {
     const currentString = roles[currentRole];
@@ -70,7 +69,7 @@ const Hero = () => {
           {/* Greeting */}
           <div className="animate-fade-in-up opacity-0 delay-100">
             <p className="text-lg md:text-xl text-muted-foreground mb-4">
-              Bonjour, je suis
+              {t('hello')}
             </p>
           </div>
 
@@ -107,7 +106,7 @@ const Hero = () => {
                 onClick={scrollToProjects}
                 className="btn-hero group w-full sm:w-auto"
               >
-                Voir mes projets
+                {t('seeProjects')}
                 <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
               
@@ -117,7 +116,7 @@ const Hero = () => {
                   onClick={scrollToContact}
                   className="btn-outline group w-full sm:w-auto"
                 >
-                  Me contacter
+                  {t('contactMe')}
                   <ChevronDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
                 </Button>
                 
@@ -133,7 +132,7 @@ const Hero = () => {
                   }}
                 >
                   <Download className="mr-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
-                  Télécharger CV
+                  {t('downloadCv')}
                 </Button>
               </div>
             </div>

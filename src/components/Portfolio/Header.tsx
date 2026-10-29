@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
+import { useLanguage } from '@/lib/i18n';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +24,7 @@ const Header = () => {
     { href: '#projets', label: 'Projets' },
     { href: '#contact', label: 'Contact' },
   ];
+  const localizedNavLabels = [t('home'), t('about'), t('skills'), t('projects'), t('contact')];
 
   const socialLinks = [
     { href: 'https://github.com/Liantsoarandria0803', icon: Github, label: 'GitHub' },
@@ -57,13 +60,13 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
+            {navLinks.map((link, index) => (
               <button
                 key={link.href}
                 onClick={() => scrollToSection(link.href)}
                 className="text-foreground hover:text-primary transition-colors duration-200 relative group"
               >
-                {link.label}
+                {localizedNavLabels[index]}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full"></span>
               </button>
             ))}
@@ -88,6 +91,16 @@ const Header = () => {
             })}
           </div>
 
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => setLanguage(language === 'fr' ? 'en' : 'fr')}
+            className="hidden md:inline-flex min-w-14"
+            aria-label={language === 'fr' ? 'Switch to English' : 'Passer au français'}
+          >
+            {language === 'fr' ? 'EN' : 'FR'}
+          </Button>
+
           {/* Mobile Menu Button */}
           <Button
             variant="ghost"
@@ -103,13 +116,13 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg border-b border-border/50 animate-fade-in-up">
             <nav className="container mx-auto px-4 py-6 space-y-4">
-              {navLinks.map((link) => (
+              {navLinks.map((link, index) => (
                 <button
                   key={link.href}
                   onClick={() => scrollToSection(link.href)}
                   className="block w-full text-left text-foreground hover:text-primary transition-colors duration-200 py-2"
                 >
-                  {link.label}
+                  {localizedNavLabels[index]}
                 </button>
               ))}
               
@@ -129,6 +142,13 @@ const Header = () => {
                     </a>
                   );
                 })}
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setLanguage(language === 'fr' ? 'en' : 'fr')}
+                >
+                  {language === 'fr' ? 'EN' : 'FR'}
+                </Button>
               </div>
             </nav>
           </div>

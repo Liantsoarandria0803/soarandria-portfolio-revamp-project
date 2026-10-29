@@ -1,8 +1,10 @@
 import { Heart, ArrowUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/lib/i18n';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { t, language } = useLanguage();
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -17,22 +19,22 @@ const Footer = () => {
 
   const footerLinks = [
     {
-      title: 'Navigation',
+      title: t('navigation'),
       links: [
-        { label: 'Accueil', href: '#accueil' },
-        { label: 'À Propos', href: '#apropos' },
-        { label: 'Compétences', href: '#competences' },
-        { label: 'Projets', href: '#projets' },
-        { label: 'Contact', href: '#contact' }
+        { label: t('home'), href: '#accueil' },
+        { label: t('about'), href: '#apropos' },
+        { label: t('skills'), href: '#competences' },
+        { label: t('projects'), href: '#projets' },
+        { label: t('contact'), href: '#contact' }
       ]
     },
     
     {
-      title: 'Ressources',
+      title: t('resources'),
       links: [
-        { label: 'CV / Resume', href: '/resume1.pdf' },
-        { label: 'Certifications', href: '#competences' },
-        { label: 'Open Source', href: 'https://github.com/Liantsoarandria0803' }
+        { label: t('resume'), href: '/resume1.pdf' },
+        { label: t('certifications'), href: '#competences' },
+        { label: t('openSource'), href: 'https://github.com/Liantsoarandria0803' }
       ]
     }
   ];
@@ -47,13 +49,12 @@ const Footer = () => {
               Liantsoa Randria
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              AI ENGINEER, créateur d'expériences numériques 
-              innovantes et solutions web modernes.
+              {language === 'fr' ? 'INGÉNIEUR IA, créateur d’expériences numériques innovantes et de solutions web modernes.' : 'AI ENGINEER, creating innovative digital experiences and modern web solutions.'}
             </p>
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-              <span>Développé avec</span>
+              <span>{t('madeWith')}</span>
               <Heart className="h-4 w-4 text-red-500 fill-red-500" />
-              <span>à Madagascar</span>
+              <span>{language === 'fr' ? 'à Madagascar' : 'in Madagascar'}</span>
             </div>
           </div>
 
@@ -93,10 +94,10 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-muted-foreground text-center md:text-left">
               <p>
-                © {currentYear} Liantsoa Randria. Tous droits réservés.
+                © {currentYear} Liantsoa Randria. {t('rights')}
               </p>
               <p className="mt-1">
-                Conçu et développé avec React, TypeScript et Tailwind CSS.
+                {t('builtWith')}
               </p>
             </div>
 
@@ -112,7 +113,7 @@ const Footer = () => {
                 className="group"
               >
                 <ArrowUp className="h-4 w-4 mr-2 group-hover:-translate-y-1 transition-transform" />
-                Retour en haut
+                {t('backTop')}
               </Button>
             </div>
           </div>
@@ -122,7 +123,7 @@ const Footer = () => {
         <div className="mt-8 pt-6 border-t border-border/50">
           <div className="text-center">
             <p className="text-xs text-muted-foreground">
-              Ce portfolio est open source et disponible sur{' '}
+              {language === 'fr' ? 'Ce portfolio est open source et disponible sur ' : 'This portfolio is open source and available on '}
               <a 
                 href="https://github.com/Liantsoarandria0803/PortifolioV2" 
                 target="_blank" 
@@ -131,7 +132,7 @@ const Footer = () => {
               >
                 GitHub
               </a>
-              . N'hésitez pas à le forker ou à contribuer !
+              {language === 'fr' ? '. N’hésitez pas à le forker ou à contribuer !' : '. Feel free to fork it or contribute!'}
             </p>
           </div>
         </div>

@@ -14,9 +14,11 @@ import {
   MessageCircle,
   Clock
 } from 'lucide-react';
+import { useLanguage } from '@/lib/i18n';
 
 const Contact = () => {
   const { toast } = useToast();
+  const { t, language } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -35,22 +37,22 @@ const Contact = () => {
     },
     {
       icon: Phone,
-      title: 'Téléphone',
-      value: '+261 32 45 779 76',
-      link: 'tel:+261324577976',
+      title: language === 'fr' ? 'Téléphone' : 'Phone',
+      value: '+261 32 43 779 76',
+      link: 'tel:+261324377976',
       color: 'text-accent'
     },
     {
       icon: MapPin,
-      title: 'Localisation',
+      title: language === 'fr' ? 'Localisation' : 'Location',
       value: 'Antananarivo, Madagascar',
       link: 'https://maps.google.com/?q=Antananarivo,Madagascar',
       color: 'text-skill-glow'
     },
     {
       icon: Clock,
-      title: 'Disponibilité',
-      value: 'Lun - Ven, 9h - 18h',
+      title: language === 'fr' ? 'Disponibilité' : 'Availability',
+      value: language === 'fr' ? 'Lun - Ven, 9h - 18h' : 'Mon - Fri, 9 AM - 6 PM',
       color: 'text-primary'
     }
   ];
@@ -91,10 +93,10 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold gradient-text-primary mb-4">
-            Contactez-moi
+            {t('contactTitle')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Prêt à donner vie à votre projet ? Discutons de vos idées et transformons-les en réalité.
+            {language === 'fr' ? 'Prêt à donner vie à votre projet ? Discutons de vos idées et transformons-les en réalité.' : 'Ready to bring your project to life? Let’s discuss your ideas and make them a reality.'}
           </p>
         </div>
 
@@ -102,11 +104,11 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold mb-6">Restons en Contact</h3>
+              <h3 className="text-2xl font-bold mb-6">{t('stayInTouch')}</h3>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Je suis passionné par la création de solutions innovantes et toujours 
-                enthousiaste à l'idée de collaborer sur de nouveaux projets. N'hésitez 
-                pas à me contacter pour discuter de vos besoins.
+                {language === 'fr'
+                  ? 'Je suis passionné par la création de solutions innovantes et toujours enthousiaste à l’idée de collaborer sur de nouveaux projets. N’hésitez pas à me contacter pour discuter de vos besoins.'
+                  : 'I am passionate about building innovative solutions and always welcome new collaborations. Feel free to get in touch to discuss what you need.'}
               </p>
             </div>
 
@@ -143,7 +145,7 @@ const Contact = () => {
 
             {/* Social Links */}
             <div>
-              <h4 className="font-semibold mb-4">Suivez-moi</h4>
+              <h4 className="font-semibold mb-4">{t('followMe')}</h4>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => {
                   const Icon = social.icon;
@@ -166,19 +168,19 @@ const Contact = () => {
             {/* Quick Stats */}
             <Card className="p-6 bg-gradient-to-br from-primary/5 to-accent/5">
               <CardContent>
-                <h4 className="font-semibold mb-4">Pourquoi me choisir ?</h4>
+                <h4 className="font-semibold mb-4">{t('whyChooseMe')}</h4>
                 <div className="grid grid-cols-2 gap-4 text-center">
                   <div>
                     <div className="text-2xl font-bold text-primary">24h</div>
-                    <div className="text-xs text-muted-foreground">Temps de réponse</div>
+                    <div className="text-xs text-muted-foreground">{language === 'fr' ? 'Temps de réponse' : 'Response time'}</div>
                   </div>
                   <div>
                     <div className="text-2xl font-bold text-accent">30+</div>
-                    <div className="text-xs text-muted-foreground">Projets livrés</div>
+                    <div className="text-xs text-muted-foreground">{language === 'fr' ? 'Projets livrés' : 'Projects delivered'}</div>
                   </div>
                   <div>
                     <div className="text-2xl font-bold text-skill-glow">3+</div>
-                    <div className="text-xs text-muted-foreground">Années d'expérience</div>
+                    <div className="text-xs text-muted-foreground">{language === 'fr' ? 'Années d’expérience' : 'Years of experience'}</div>
                   </div>
                 </div>
               </CardContent>
@@ -195,13 +197,13 @@ const Contact = () => {
                 className="space-y-6"
               >
                 <div>
-                  <h3 className="text-xl font-bold mb-6">Envoyez-moi un message</h3>
+                  <h3 className="text-xl font-bold mb-6">{t('sendMessage')}</h3>
                 </div>
 
                 <div className="grid grid-cols-1 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-2">
-                      Nom complet *
+                      {t('fullName')} *
                     </label>
                     <Input
                       id="name"
@@ -209,7 +211,7 @@ const Contact = () => {
                       type="text"
                       value={formData.name}
                       onChange={handleInputChange}
-                      placeholder="Votre nom"
+                      placeholder={language === 'fr' ? 'Votre nom' : 'Your name'}
                       required
                       className="transition-all duration-200 focus:ring-2 focus:ring-primary/20"
                     />
@@ -234,7 +236,7 @@ const Contact = () => {
 
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium mb-2">
-                    Sujet *
+                      {t('subject')} *
                   </label>
                   <Input
                     id="subject"
@@ -242,7 +244,7 @@ const Contact = () => {
                     type="text"
                     value={formData.subject}
                     onChange={handleInputChange}
-                    placeholder="Sujet de votre message"
+                    placeholder={language === 'fr' ? 'Sujet de votre message' : 'Message subject'}
                     required
                     className="transition-all duration-200 focus:ring-2 focus:ring-primary/20"
                   />
@@ -250,14 +252,14 @@ const Contact = () => {
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium mb-2">
-                    Message *
+                    {t('message')} *
                   </label>
                   <Textarea
                     id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    placeholder="Décrivez votre projet ou votre demande..."
+                    placeholder={language === 'fr' ? 'Décrivez votre projet ou votre demande...' : 'Describe your project or request...'}
                     rows={6}
                     required
                     className="transition-all duration-200 focus:ring-2 focus:ring-primary/20 resize-none"
@@ -272,19 +274,18 @@ const Contact = () => {
                   {isSubmitting ? (
                     <>
                       <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                      Envoi en cours...
+                      {t('sending')}
                     </>
                   ) : (
                     <>
-                      Envoyer le message
+                      {t('send')}
                       <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </>
                   )}
                 </Button>
 
                 <p className="text-xs text-muted-foreground text-center">
-                  En envoyant ce formulaire, vous acceptez que je puisse vous recontacter 
-                  concernant votre demande.
+                  {language === 'fr' ? 'En envoyant ce formulaire, vous acceptez que je puisse vous recontacter concernant votre demande.' : 'By submitting this form, you agree that I may contact you about your request.'}
                 </p>
               </form>
             </CardContent>

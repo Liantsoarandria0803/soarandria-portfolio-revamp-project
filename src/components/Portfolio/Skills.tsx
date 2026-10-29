@@ -11,9 +11,11 @@ import {
   Zap
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '@/lib/i18n';
 
 const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const { t, language } = useLanguage();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -35,7 +37,7 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      title:'AI & Machine Learning',
+      title: language === 'fr' ? 'IA et apprentissage automatique' : 'AI & Machine Learning',
       icon: Zap,
       color: 'text-skill-glow',
       bgColor: 'bg-skill-glow/10',
@@ -53,7 +55,7 @@ const Skills = () => {
       ]
     },
     {
-      title: 'Frontend',
+      title: language === 'fr' ? 'Développement frontend' : 'Frontend',
       icon: Code,
       color: 'text-primary',
       bgColor: 'bg-primary/10',
@@ -66,7 +68,7 @@ const Skills = () => {
       ]
     },
     {
-      title: 'Backend',
+      title: language === 'fr' ? 'Développement backend' : 'Backend',
       icon: Database,
       color: 'text-accent',
       bgColor: 'bg-accent/10',
@@ -81,7 +83,7 @@ const Skills = () => {
       ]
     },
     {
-      title: 'Mobile',
+      title: language === 'fr' ? 'Développement mobile' : 'Mobile',
       icon: Smartphone,
       color: 'text-skill-glow',
       bgColor: 'bg-skill-glow/10',
@@ -90,7 +92,7 @@ const Skills = () => {
       ]
     },
     {
-      title: 'Cloud & DevOps',
+      title: language === 'fr' ? 'Cloud et DevOps' : 'Cloud & DevOps',
       icon: Cloud,
       color: 'text-primary',
       bgColor: 'bg-primary/10',
@@ -102,7 +104,7 @@ const Skills = () => {
       ]
     },
     {
-      title: 'Design',
+      title: language === 'fr' ? 'Conception' : 'Design',
       icon: Palette,
       color: 'text-accent',
       bgColor: 'bg-accent/10',
@@ -114,7 +116,7 @@ const Skills = () => {
       ]
     },
     {
-      title: 'Outils',
+      title: language === 'fr' ? 'Outils' : 'Tools',
       icon: GitBranch,
       color: 'text-skill-glow',
       bgColor: 'bg-skill-glow/10',
@@ -127,6 +129,15 @@ const Skills = () => {
     }
   ];
 
+  const skillLabelsFr: Record<string, string> = {
+    'Machine Learning': 'Apprentissage automatique', 'Deep Learning': 'Apprentissage profond',
+    'Natural Language Processing': 'Traitement automatique du langage', 'Computer Vision': 'Vision par ordinateur',
+    'Reinforcement Learning': 'Apprentissage par renforcement', 'Data Analysis': 'Analyse de données',
+    'Data Visualization': 'Visualisation de données', 'AI Ethics': 'Éthique de l’IA',
+    'AI Model Deployment': 'Déploiement de modèles IA', 'LLM Fine-tuning': 'Ajustement de grands modèles de langage',
+    'Responsive Design': 'Conception adaptative', 'UI/UX Design': 'Conception UI/UX',
+  };
+
   const certifications = [
     { id: 1, path: "/RANDRIANASIMBOLARIVELO20240916-74-yim38d.jpg", alt: "Certification 1" },
     { id: 2, path: "/RANDRIANASIMBOLARIVELO20241020-72-1e0j7vh.jpg", alt: "Certification 2" },
@@ -134,9 +145,9 @@ const Skills = () => {
     { id: 4, path: "/Liantsoa Randria - Pandas.png", alt: "Pandas Certification" },
     { id: 5, path: "/Liantsoa Randria - Intro to SQL.png", alt: "Intro to SQL" },
     { id: 6, path: "/RANDRIANASIMBOLARIVELO20240916-74-yim38d.jpg", alt: "Certification 6" },
-    {id:7,path:"/Liantsoa Randria - Time Series.png", alt: "Time Series Certification" },
-    {id:8,path:"/LLMfundamentals.webp", alt: "LLM fundamentals Certification" },
-    {id:8,path:"/Finetunning.webp", alt: "Fine tuning fundamentals Certification" }
+    { id: 7, path: "/Liantsoa Randria - Time Series.png", alt: "Time Series Certification" },
+    { id: 8, path: "/LLMfundamentals.webp", alt: "LLM fundamentals Certification" },
+    { id: 9, path: "/Finetunning.webp", alt: "Fine tuning fundamentals Certification" },
   ];
 
   return (
@@ -144,10 +155,10 @@ const Skills = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold gradient-text-primary mb-4">
-            Mes Compétences
+            {language === 'fr' ? 'Mes compétences' : 'My skills'}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Un aperçu de mes compétences techniques et des technologies que je maîtrise.
+            {language === 'fr' ? 'Un aperçu de mes compétences techniques et des technologies que je maîtrise.' : 'An overview of my technical skills and the technologies I work with.'}
           </p>
         </div>
 
@@ -172,7 +183,7 @@ const Skills = () => {
                     {category.skills.map((skill, skillIndex) => (
                       <div key={skillIndex} className="space-y-2">
                         <div className="flex justify-between items-center">
-                          <span className="font-medium text-sm">{skill.name}</span>
+                          <span className="font-medium text-sm">{language === 'fr' ? (skillLabelsFr[skill.name] ?? skill.name) : skill.name}</span>
                         </div>
                         
                       </div>
@@ -186,12 +197,12 @@ const Skills = () => {
 
         {/* Certifications */}
         <div className="text-center mb-12">
-          <h3 className="text-2xl font-bold mb-8 text-foreground">Certifications</h3>
+          <h3 className="text-2xl font-bold mb-8 text-foreground">{t('certifications')}</h3>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
             {certifications.map((cert, index) => (
               <motion.div
-            key={cert.id}
+            key={`${cert}-${index}`}
               initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -207,7 +218,7 @@ const Skills = () => {
 
         {/* Technologies Cloud */}
         <div className="text-center">
-          <h3 className="text-2xl font-bold mb-8">Technologies Favorites</h3>
+          <h3 className="text-2xl font-bold mb-8">{t('favoriteTechnologies')}</h3>
           
           <div className="flex flex-wrap justify-center gap-3">
             {[
