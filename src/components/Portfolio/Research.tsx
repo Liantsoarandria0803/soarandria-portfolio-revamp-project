@@ -2,17 +2,19 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ExternalLink, GraduationCap, Telescope } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n';
+import { motion, useReducedMotion } from 'framer-motion';
 import ProjectArtwork from './ProjectArtwork';
 
 const Research = () => {
   const { language } = useLanguage();
   const isFrench = language === 'fr';
+  const reduceMotion = useReducedMotion();
 
   const projects = [
     {
       title: isFrench ? 'Classification d’images CubeSat' : 'CubeSat Image Classification',
       subtitle: isFrench
-        ? 'Hack4dev Data Science Hackathon Cascade · Madagascar · 2025'
+        ? 'Hackathon Data Science Hack4dev Cascade · Madagascar · 2025'
         : 'Hack4dev Data Science Hackathon Cascade · Madagascar · 2025',
       artwork: 'cubesat',
       summary: isFrench
@@ -31,7 +33,7 @@ const Research = () => {
             'Used 128 × 128 resizing, class weighting, light augmentation and iterative model comparisons.',
             'One of 20 qualifying solutions among 48 submissions across 13 regional hackathons; contributed to the joint paper.',
           ],
-      tags: ['Python', 'CNN', 'SeparableConv2D', 'Computer Vision'],
+      tags: ['Python', 'CNN', 'SeparableConv2D', isFrench ? 'Vision par ordinateur' : 'Computer Vision'],
       url: 'https://github.com/Liantsoarandria0803',
       linkLabel: isFrench ? 'Profil GitHub' : 'GitHub profile',
     },
@@ -55,7 +57,9 @@ const Research = () => {
             'Reviewed explicit and implicit regularization: dropout, weight decay, data augmentation and SGD’s implicit bias.',
             'Created a complete graduate-level presentation using LaTeX Beamer and PowerPoint.',
           ],
-      tags: ['Deep Learning Theory', 'Generalization', 'Regularization', 'LaTeX Beamer'],
+      tags: isFrench
+        ? ['Théorie du deep learning', 'Généralisation', 'Régularisation', 'LaTeX Beamer']
+        : ['Deep Learning Theory', 'Generalization', 'Regularization', 'LaTeX Beamer'],
       url: 'https://github.com/Liantsoarandria0803',
       linkLabel: isFrench ? 'Profil GitHub' : 'GitHub profile',
     },
@@ -79,7 +83,17 @@ const Research = () => {
 
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 max-w-7xl mx-auto">
           {projects.map((project) => (
-            <Card key={project.title} className="overflow-hidden h-full">
+            <motion.div
+              key={project.title}
+              className="h-full [perspective:1400px]"
+              initial={reduceMotion ? false : { opacity: 0, y: 24 }}
+              whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.15 }}
+              whileHover={reduceMotion ? undefined : { y: -7, rotateX: -2, rotateY: 2, scale: 1.008 }}
+              transition={{ duration: 0.45, ease: 'easeOut' }}
+              style={{ transformStyle: 'preserve-3d' }}
+            >
+            <Card className="overflow-hidden h-full">
               <ProjectArtwork variant={project.artwork} title={project.title} />
               <CardContent className="p-6 md:p-8 space-y-5">
                 <div className="flex items-start gap-3">
@@ -101,6 +115,7 @@ const Research = () => {
                 </a>
               </CardContent>
             </Card>
+            </motion.div>
           ))}
         </div>
       </div>

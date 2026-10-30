@@ -3,7 +3,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/hooks/use-toast';
 import { 
   Mail, 
   Phone, 
@@ -17,7 +16,6 @@ import {
 import { useLanguage } from '@/lib/i18n';
 
 const Contact = () => {
-  const { toast } = useToast();
   const { t, language } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
@@ -78,9 +76,8 @@ const Contact = () => {
     }
   ];
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = () => {
     setIsSubmitting(true);
-    // form submission handled by Formspree via action/method
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -227,7 +224,7 @@ const Contact = () => {
                       type="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      placeholder="votre@email.com"
+                      placeholder={language === 'fr' ? 'votre@email.com' : 'your@email.com'}
                       required
                       className="transition-all duration-200 focus:ring-2 focus:ring-primary/20"
                     />

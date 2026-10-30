@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { 
@@ -14,26 +13,8 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '@/lib/i18n';
 
 const Skills = () => {
-  const [isVisible, setIsVisible] = useState(false);
   const { t, language } = useLanguage();
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    const element = document.querySelector('#competences');
-    if (element) {
-      observer.observe(element);
-    }
-
-    return () => observer.disconnect();
-  }, []);
+  const isFrench = language === 'fr';
 
   const skillCategories = [
     {
@@ -42,16 +23,16 @@ const Skills = () => {
       color: 'text-skill-glow',
       bgColor: 'bg-skill-glow/10',
       skills: [
-        { name: 'Machine Learning', level: 85 },
-        { name: 'Deep Learning', level: 80 },
-        { name: 'Natural Language Processing', level: 80 },
-        { name: 'Computer Vision', level: 90 },
-        { name: 'Reinforcement Learning', level: 65 },
-        { name: 'Data Analysis', level: 90 },
-        { name: 'Data Visualization', level: 85 },
-        { name: 'AI Ethics', level: 70 },
-        {name :'AI Model Deployment', level: 90 },
-        {name :'LLM Fine-tuning', level: 80 },
+        { name: 'Machine Learning' },
+        { name: 'Deep Learning' },
+        { name: 'Natural Language Processing' },
+        { name: 'Computer Vision' },
+        { name: 'Reinforcement Learning' },
+        { name: 'Data Analysis' },
+        { name: 'Data Visualization' },
+        { name: 'AI Ethics' },
+        {name :'AI Model Deployment' },
+        {name :'LLM Fine-tuning' },
       ]
     },
     {
@@ -60,11 +41,11 @@ const Skills = () => {
       color: 'text-primary',
       bgColor: 'bg-primary/10',
       skills: [
-        { name: 'React', level: 95 },
-        {name:'JavaScript', level: 90 },
-        { name: 'TypeScript', level: 90 },
-        { name: 'Vue.js', level: 80 },
-        { name: 'Tailwind CSS', level: 95 },
+        { name: 'React' },
+        {name:'JavaScript' },
+        { name: 'TypeScript' },
+        { name: 'Vue.js' },
+        { name: 'Tailwind CSS' },
       ]
     },
     {
@@ -73,13 +54,13 @@ const Skills = () => {
       color: 'text-accent',
       bgColor: 'bg-accent/10',
       skills: [
-        {name:'FAST-API', level: 90 },
-        {name:'Django', level: 89 },
-        {name:'mySQL', level: 90 },
-        { name: 'Node.js', level: 80 },
-        { name: 'NestJS', level: 80 },
-        { name: 'PostgreSQL', level: 85 },
-        { name: 'Prisma', level: 80 }
+        {name:'FAST-API' },
+        {name:'Django' },
+        {name:'mySQL' },
+        { name: 'Node.js' },
+        { name: 'NestJS' },
+        { name: 'PostgreSQL' },
+        { name: 'Prisma' }
       ]
     },
     {
@@ -88,7 +69,7 @@ const Skills = () => {
       color: 'text-skill-glow',
       bgColor: 'bg-skill-glow/10',
       skills: [
-        { name: 'React Native', level: 85 }
+        { name: 'React Native' }
       ]
     },
     {
@@ -97,10 +78,10 @@ const Skills = () => {
       color: 'text-primary',
       bgColor: 'bg-primary/10',
       skills: [
-        { name: 'AWS', level: 75 },
-        { name: 'Docker', level: 80 },
-        { name: 'Vercel', level: 85 },
-        { name: 'Netlify', level: 90 }
+        { name: 'AWS' },
+        { name: 'Docker' },
+        { name: 'Vercel' },
+        { name: 'Netlify' }
       ]
     },
     {
@@ -109,10 +90,10 @@ const Skills = () => {
       color: 'text-accent',
       bgColor: 'bg-accent/10',
       skills: [
-        { name: 'Figma', level: 85 },
-        { name: 'Adobe XD', level: 75 },
-        { name: 'UI/UX Design', level: 80 },
-        { name: 'Responsive Design', level: 75 }
+        { name: 'Figma' },
+        { name: 'Adobe XD' },
+        { name: 'UI/UX Design' },
+        { name: 'Responsive Design' }
       ]
     },
     {
@@ -121,10 +102,10 @@ const Skills = () => {
       color: 'text-skill-glow',
       bgColor: 'bg-skill-glow/10',
       skills: [
-        { name: 'Git', level: 95 },
-        { name: 'GitHub', level: 90 },
-        { name: 'VS Code', level: 95 },
-        { name: 'Postman', level: 85 }
+        { name: 'Git' },
+        { name: 'GitHub' },
+        { name: 'VS Code' },
+        { name: 'Postman' }
       ]
     }
   ];
@@ -139,15 +120,15 @@ const Skills = () => {
   };
 
   const certifications = [
-    { id: 1, path: "/RANDRIANASIMBOLARIVELO20240916-74-yim38d.jpg", alt: "Certification 1" },
-    { id: 2, path: "/RANDRIANASIMBOLARIVELO20241020-72-1e0j7vh.jpg", alt: "Certification 2" },
-    { id: 3, path: "/Liantsoa Randria - Intro to Machine Learning.png", alt: "Intro to Machine Learning" },
-    { id: 4, path: "/Liantsoa Randria - Pandas.png", alt: "Pandas Certification" },
-    { id: 5, path: "/Liantsoa Randria - Intro to SQL.png", alt: "Intro to SQL" },
-    { id: 6, path: "/RANDRIANASIMBOLARIVELO20240916-74-yim38d.jpg", alt: "Certification 6" },
-    { id: 7, path: "/Liantsoa Randria - Time Series.png", alt: "Time Series Certification" },
-    { id: 8, path: "/LLMfundamentals.webp", alt: "LLM fundamentals Certification" },
-    { id: 9, path: "/Finetunning.webp", alt: "Fine tuning fundamentals Certification" },
+    { id: 1, path: "/RANDRIANASIMBOLARIVELO20240916-74-yim38d.jpg", alt: isFrench ? 'Certificat professionnel' : 'Professional certificate' },
+    { id: 2, path: "/RANDRIANASIMBOLARIVELO20241020-72-1e0j7vh.jpg", alt: isFrench ? 'Certificat professionnel' : 'Professional certificate' },
+    { id: 3, path: "/Liantsoa Randria - Intro to Machine Learning.png", alt: isFrench ? 'Introduction au machine learning' : 'Introduction to machine learning' },
+    { id: 4, path: "/Liantsoa Randria - Pandas.png", alt: isFrench ? 'Certification Pandas' : 'Pandas certification' },
+    { id: 5, path: "/Liantsoa Randria - Intro to SQL.png", alt: isFrench ? 'Introduction à SQL' : 'Introduction to SQL' },
+    { id: 6, path: "/RANDRIANASIMBOLARIVELO20240916-74-yim38d.jpg", alt: isFrench ? 'Certificat professionnel' : 'Professional certificate' },
+    { id: 7, path: "/Liantsoa Randria - Time Series.png", alt: isFrench ? 'Certification en séries temporelles' : 'Time series certification' },
+    { id: 8, path: "/LLMfundamentals.webp", alt: isFrench ? 'Fondamentaux des grands modèles de langage' : 'LLM fundamentals' },
+    { id: 9, path: "/Finetunning.webp", alt: isFrench ? 'Fondamentaux du fine-tuning' : 'Fine-tuning fundamentals' },
   ];
 
   return (

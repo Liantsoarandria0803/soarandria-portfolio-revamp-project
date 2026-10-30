@@ -18,11 +18,11 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { href: '#accueil', label: 'Accueil' },
-    { href: '#apropos', label: 'À Propos' },
-    { href: '#competences', label: 'Compétences' },
-    { href: '#projets', label: 'Projets' },
-    { href: '#contact', label: 'Contact' },
+    { href: '#accueil' },
+    { href: '#apropos' },
+    { href: '#competences' },
+    { href: '#projets' },
+    { href: '#contact' },
   ];
   const localizedNavLabels = [t('home'), t('about'), t('skills'), t('projects'), t('contact')];
 
